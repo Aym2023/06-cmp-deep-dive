@@ -14,3 +14,5 @@ export class DashItemsComponent {
   image = input.required<{src: string; alt: string}>();
  title = input.required<string>();
 }
+
+
