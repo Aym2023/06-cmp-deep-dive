@@ -10,7 +10,11 @@ import { DashItemsComponent } from './dashboard/dash-items/dash-items.component'
   selector: 'app-root',
   standalone: true,
   templateUrl: './app.component.html',
-  imports: [HeaderComponent, ServerStatusComponent, TicketsComponent, DashItemsComponent, TrafficComponent],
+  imports: [HeaderComponent,
+            ServerStatusComponent,
+            TicketsComponent,
+            DashItemsComponent,
+            TrafficComponent],
 })
 export class AppComponent {
 }
