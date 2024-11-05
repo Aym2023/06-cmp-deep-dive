@@ -7,7 +7,21 @@ import { Component } from '@angular/core';
   templateUrl: './server-status.component.html',
   styleUrl: './server-status.component.css'
 })
-export class ServerStatusComponent {
-  currentStatus = 'online';
 
+export class ServerStatusComponent {
+  currentStatus: 'online' | 'offline' |  'unknown' = 'offline';
+
+  constructor() {
+    setInterval( () => {
+      const rd = Math.random();
+
+      if (rd < 0.5) {
+        this.currentStatus = 'online';
+      } else if (rd < 0.9) {
+        this.currentStatus = 'offline';
+      } else {
+        this.currentStatus = 'unknown';
+      }
+    }, 5000);
+  }
 }
